@@ -1,0 +1,110 @@
+body {
+	background-color: #f4f4f4;
+	color: #373737;
+	text-align: center;
+	font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body.dark-theme {
+	background-color: #373737;
+	color: #f4f4f4;
+}
+body.dark-theme hr {
+	background-color: #f4f4f4;
+	box-shadow: 0 0 10px 0 #999999;
+}
+
+hr {
+	border: none;
+	background-color: #373737;
+	margin: 35px;
+}
+
+.title {
+	font-size: 25px;
+	margin: 10px;
+}
+
+#times {
+	font-size: 40px;
+}
+
+#data {
+	font-size: 40px;
+}
+
+#time {
+	font-size: 30px;
+}
+
+.switch {
+	text-align: right;
+}
+
+.switch-btn {
+	display: inline-block;
+	width: 62px;
+	height: 24px;
+	border-radius: 12px;
+	background: #bfbfbf;
+	z-index: 0;
+	top: 6px;
+	margin: 0 8px 0 8px;
+	padding: 0;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	transition-duration: 300ms;
+}
+
+.switch-btn::after {
+	content: "";
+	height: 36px;
+	width: 36px;
+	border-radius: 18px;
+	background: #373737;
+	top: -6px;
+	left: -6px;
+	transition-duration: 300ms;
+	box-shadow: 0 0 10px 0 #999999;
+	position: absolute;
+	z-index: 1;
+}
+
+.shitch-on {
+	background: #f4f4f4;
+	box-shadow: 0 0 10px 0 #999999;
+}
+
+.switch-on::after {
+	left: 30px;
+	background: #f4f4f4;
+}
+
+.timer__items {
+	display: flex;
+	justify-content: center;
+	font-size: 48px;
+}
+.timer__item {
+  position: relative;
+  min-width: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+.timer__item::before {
+  content: attr(data-title);
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  font-size: 14px;
+}
+.timer__item:not(:last-child)::after {
+  content: ':';
+  position: absolute;
+  right: -15px;
+}
